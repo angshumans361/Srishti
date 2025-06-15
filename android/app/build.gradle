@@ -1,22 +1,26 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+def flutterVersionCode = 1
+def flutterVersionName = "1.0"
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 33
+    namespace "com.yourname.srishti"
+    compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.yourdomain.srishti"
-        minSdk 21
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        applicationId "com.yourname.srishti"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode flutterVersionCode
+        versionName flutterVersionName
     }
 
     buildTypes {
         release {
+            // Enables code shrinking, obfuscation, and optimization.
             minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
