@@ -20,7 +20,8 @@ jobs:
       run: cd sristi_library && flutter pub get
 
     - name: Build APK
-      run: cd sristi_library && flutter build apk --release
+      run: cd sristi_library/sristi_library
+flutter build apk --release
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
