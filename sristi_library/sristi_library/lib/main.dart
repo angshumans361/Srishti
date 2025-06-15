@@ -12,17 +12,7 @@ class SristiLibraryApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('সৃষ্টি লাইব্ৰেৰী'),
-        ),
-        body: Center(
-          child: Text(
-            'Welcome to সৃষ্টি লাইব্ৰেৰী',
-            style: TextStyle(fontSize: 24),
-          ),
-        ),
-      ),
+      home: LoginPage(),
     );
   }
 }
